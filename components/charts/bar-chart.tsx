@@ -4,7 +4,7 @@ import * as d3 from "d3";
 
 import { useEffect, useRef, useState } from "react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Input } from "../ui/input";
+import { Input } from "@/components/ui/input";
 
 interface columnsDataInterface {
   value: string;
@@ -93,7 +93,7 @@ export const BarChart = ({ file }: { file: string }) => {
   }, [selection, selectedColumn, textSize, dimensions]);
 
   return (
-    <div className="flex items-center justify-center min-h-screen min-w-full">
+    <div className="flex items-center justify-center">
       <div className="space-y-1 5">
         <Select onValueChange={(value) => setSelectedColumn(value)} defaultValue="">
           <SelectTrigger className="w-[180px]">
